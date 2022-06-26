@@ -1,0 +1,10 @@
+\backcite {1}{{1}{I}{section.1}}
+\backcite {2}{{1}{I}{section.1}}
+\backcite {12,13}{{1}{I}{section.1}}
+\backcite {8,9,10,11}{{1}{\unhbox \voidb@x \hbox {I-}3}{subsubsection.1.0.3}}
+\backcite {14}{{2}{\unhbox \voidb@x \hbox {II-A}}{subsection.2.1}}
+\backcite {3}{{5}{IV}{section.4}}
+\backcite {4}{{5}{V}{section.5}}
+\backcite {5}{{5}{V}{section.5}}
+\backcite {6}{{5}{V}{section.5}}
+\backcite {7}{{5}{V}{section.5}}

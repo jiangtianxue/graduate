@@ -1,0 +1,38 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\title{流水线型FFT设计}
+\author{刘润}
+
+\begin{document}
+
+\maketitle
+\section{FFT混合基分解}
+
+\subsection{FFT混合基分解一般形式}
+对于$N$点$DFT$，如果$N$是一个复合数，它可以分解成一些因子的乘积，则可以用$FTT$的一般算法，即混合基$FFT$算法，
+而基-2算法只是这种一般算法的特例。
+
+若$N$可以表示为复合数$N=r_1r_2 \cdots r_L$，则对于$n<r_1r_2 \cdots r_L$，的任何一个正整数$n$，可以按照
+$L$基$r_1$，$r_2$，$\cdots$，$r_L$ 表示为多基多进制形式$(n_{L-1}n_{L-2} \cdots n_1n_0)_{r_1r_2 \cdots r_L}$，
+这一多基多进制所代表的数值为：
+\begin{equation}
+    (n)_{10} = n_{L-1}(r_2r_3 \cdots r_L) + n_{L-2}(r_3r_4 \cdots r_L) + \cdots + n_1n_L + n_0
+\end{equation}
+其倒位序形式为$[\rho(n)]_{r_Lr_{L-1} \cdots r_2r_1} = (n_0n_1 \cdots n_{L-2}n_{L-1})_{r_Lr_{L-1} \cdots r_2r_1}$，它所代表的数值为：
+\begin{equation}
+    [\rho(n)]_{10}=n_0(r_1r_2 \cdots r_{L-1}) + n_1(r_1r_2 \cdots r_{L-2}) + \cdots + n_{L-2}r_1 + n_{L-1}
+\end{equation}
+在这一多基多进制的表示中
+\begin{equation}
+\begin{aligned}
+    &n_0 = 0,1,\cdots ,r_{L}-1 \\
+    &n_1 = 0,1,\cdots ,r_{L-1}-1 \\
+    &\cdots \\
+    &n_{L-1} = 0,1,\cdots ,r_1-1 
+\end{aligned}
+\end{equation}
+
+
+\subsection{512点FFT示例}
+\end{document} 
